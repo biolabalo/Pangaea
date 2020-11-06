@@ -1,38 +1,212 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body,
+html {
+  scroll-behavior: smooth;
+  width: 100%;
   min-height: 100vh;
+  margin: 0;
+  height: 100vh;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: white;
+  border-bottom: 1px solid grey;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.topnav h2{
+  font-weight: 100;
+}
+
+.main{
+  height: 100%;
+  background: rgb(226,230,227);
+  width: 100%;
+  min-height: calc(100vh - 70px);
+}
+
+.row {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.single-product {
+  text-align: center;
+  padding: 50px 30px;
+  min-height: 50px;
+  flex: 0 0 33.33%;
+}
+
+.single-product .product-title {
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 25px;
+  color: #2B2E2B;
+  margin-bottom: 6px;
+}
+
+.products-section{
+  padding: 25px;
+  background-color: #E2E6E3;
+}
+
+.product-image-container {
+  min-height: 220px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+.single-product .product-image {
+  font-size: 20px;
+  padding: 0 15px;
+  max-height: 180px;
+  object-fit: contain;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+img {
+  max-width: 100%;
+  border: 0;
+}
+
+@media (min-width: 1025px){
+.age-mgmt-img {
+    margin-top: -47px;
+    width: 53.5%;
+}
+}
+
+
+@media screen and (max-width:  768px) {
+  .single-product {
+    flex: 0 0 50.00%;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+.single-product .single-product-price {
+  font-size: 16px;
+  color: #0B0C0D;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.acn-bttn-2 {
+  background-color: #4B5548;
+  color: #FCFCF9;
+}
+
+.acn-bttn {
+  padding: 14px 11px;
+  border: 0.5px solid #4B5548;
+  width: calc(50% - 5px);
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+  font-family: FF Bau Medium, san-serif;
+}
+
+
+.j-start {
+  justify-content: flex-start;
+}
+
+.flex-col {
+  display: block;
+}
+
+.right_nav_panel.open {
+  right: 0;
+}
+.select-handle{
+  width: 30%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.right_nav_panel {
+  width: 400px;
+  height: 100vh;
+  background: #F2F2EF;
+  position: fixed;
+  top: 0;
+  right: -450px;
+  z-index: 22;
+  box-shadow: -8px 0 40px rgba(0,0,0,.08);
+  transition: right .3s ease;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.cart-card{
+  width : 90%;
+  padding: 10px;
+  background-color: white;
+}
+
+.cart-item-list{
+  margin-top: 10px;
+}
+
+.cart-item {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: inherit;
+  max-height: inherit;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 20px;
+  background: #fff;
+  height: 120px;
+  padding: 20px;
+}
+
+.react-cart-body {
+  margin-top: 20px;
+  -webkit-box-flex: 1;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.quantity{
+      display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.quantity-selector {
+  border: .5px solid #bcbcbc;
+  padding: 7px;
+  width: 76px;
+  display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.counter-action {
+  cursor: pointer;
+  color: #000;
+  font-size: 15px;
+}
+
+.price {
+  float: right;
+  padding: 0 10px;
+  width: inherit;
+  font-size: 13px;
+  letter-spacing: .03px;
 }
