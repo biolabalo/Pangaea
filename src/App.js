@@ -240,7 +240,6 @@ return (
     </main>
   </div>
 );
-;
 
 }
 
